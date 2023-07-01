@@ -1,0 +1,128 @@
+mkdir 
+
+make a directory 
+
+Git init 
+
+A file is created inside the folder 
+
+touch 
+
+to create a file of anytype just you have to put the file name in the end like touch test.txt
+
+vi 
+
+after creating a file you need to edit the file so vim is the editor for this just type vi test.txt
+
+cat
+
+To view the inside of the file 
+
+git add .
+
+after making the changes in the file to add it (note: remember wedding as an example where people are called to the stage to click the picture)
+
+git commit -m “this is a message”
+
+this is a commit to the master( here in wedding example we clicked the picture of the guests)
+
+git status
+
+it shows the status of the file whether the file is committed or not so and so.
+
+git log
+
+this shows how many commits have we done and all the commits .
+
+git restore --staging test.txt
+
+see if you make changes and go back to staging area( wedding example if you want the guests to remove from the stage without taking a picture or committing )
+git reset 91a6cfc7a2653279266eb0e63e4aa791ca7fe85c
+
+if you want to go to the previous commits here is an example type git log see which day you want to go and take the hash id and type this git reset
+
+note: whichever hash you take and reset the previous commits will disappear
+
+git stash
+
+This command will take your file and keep it in a backstage environment(wedding ex if the guests are not called to the stage they are made to sit behid or backstage)
+
+git stash pop 
+
+here when you call them from backstage( wedding ex when the guests from behind are called from the backstage)
+
+git stash clear 
+
+here if you don’t want them anymore or to make a commit to remove their existence( wedding ex here you are shooing away your guests from the wedding)
+
+git remote add origin https://github.com/prabhalsubbaiah/ProJectx.git
+
+here we are adding the project which is hosted in github for example  i have added the project projectx in github which i’m adding here (here git is git and remote is the server or the htttp address and the add is the add and origin is where your account is example prabhal subbaiah is the origin here)
+git push origin main
+
+here we are pushing whatever we have commited to our project which is the main branch 
+we can call our main branch master too 
+
+git remote -v 
+
+where it will show the the origin of the server or http
+
+fork 
+
+it is to create a sample or copy of the project in your own account in order to contribute to that project (because you won’t have access to directly make any changes in the project)
+
+git clone https://github.com/prabhalsubbaiah/docker-and-kubernetes-basics.git
+
+Here git clone is where you can clone the whole repository into your local ( i forked that repo to my own and i cloned it to my local)
+
+git remote add upstream https://github.com/learning-zone/docker-and-kubernetes-basics.git
+
+from where you have forked this original url (here upstream is where the origin of the main file for example docker-and-kubrernetes-basics was created by a different person/company in his profile i went and took that url that is known as upstream url)
+
+git branch prabhal
+here branching is you’re creating a new branch from master and prabhal is the new branch 
+
+git checkout prabhal
+
+here it’ll change from main to prabhal so all the commits that i make will go to prabhal (so head it pointing to prabhal)
+
+head 
+
+it is a pointer to where the commits should be made so will call it as checkout 
+
+git push origin prabhal -f
+
+here if something is already commited in github and you want to forcefully change it then you use -f in order to forcefully remove from github.(If you do normal push it will throw an error)
+
+fetch upstream
+
+ when someone added their code to  master and you want to look at it in your local you can click this in github. 
+
+pull request
+
+if i have a branch i’m creating a pull request in order to pull in the master but since i don’t own the master it will be reviewed by people who owns it they will give you feedback and then they will do the merge request
+
+git fetch —all —prune
+
+here change it to your main or master first and then use this in order to fetch all the files which are having in master and prune will show you the deleted one too.
+
+git reset —hard upstream/main
+what this will do reset the main branch of my origin to the main branch (here upstream in the sense to main) here hard will reset hard so do it with caution like hardreset
+
+git pull upstream main
+
+it will directly pull the code to main if i am the owner of the project
+
+pick and squash 
+
+if you have so many commits and you want to do in a single pull request this is call pick and squash
+
+where pick will pick the commit and squash will squash it inside the previous commit (like compact it into a single commit)
+
+git rebase -i 91a6cfc7a2653279266eb0e63e4aa791ca7fe85c
+
+here we are rebasing the commits and i is the interacting environment with the commit hash
+
+Merge conflicts
+
+when someone makes the changes in the same line then we get this conflicts whichever we want.
